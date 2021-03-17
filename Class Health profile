@@ -1,0 +1,44 @@
+class HealthProfile
+{
+struct birth
+{
+int month, day, year;
+};
+ 
+struct Patient
+{
+string Fname;
+string Lname;
+char gender;
+birth b; //-| Struct previously defined data type
+float inches, weight;
+};
+
+public:
+//-| Accessor Functions 
+string get_Fname();
+string get_Lname();
+char get_gender();
+float get_height();
+float get_weight();
+birth get_bday();
+birth get_bmonth();
+birth get_byear();
+
+//-| Calculation Functions
+int person_age(); // Calculate Person's age;
+int max_heartrate(int age); // Calculate Max Heart Rate
+float body_mass(); // calculate BMI
+int targetheartrate(int heart_rate);
+//-| Mutator Functions
+
+void set_Fname(string namef);
+void set_Lname(string namel);
+void set_gender(char a);
+void set_height(float inches);
+void set_weight(float weights);
+void set_bday(int days);
+void set_bmonth(int months);
+void set_byear(int years);
+
+};
