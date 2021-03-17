@@ -1,0 +1,122 @@
+-| Accessor Functions
+ 
+string get_Fname()
+{
+return Patient.Fname;
+}
+  
+string get_Lname()
+{
+return Patient.Lname;
+}
+ 
+char get_gender()
+{
+return Patient.gender;
+}
+ 
+float get_height()
+{
+return Patient.inches;
+}
+ 
+float get_weight()
+{
+return Patient.weight;
+}
+ 
+birth get_bday()
+{
+return Patient.b.day;
+}
+ 
+birth get_bmonth();
+{
+return Patient.b.month;
+}
+ 
+birth get_byear();
+{
+return Patient.b.year;
+}
+ 
+//-| Mutator Functions
+ 
+void set_Fname(string namef)
+{
+Patient.Fname = namef;
+}
+void set_Lname(string namel)
+{
+Patient.Lname = namel;
+}
+void set_gender(char a)
+{
+Patient.gender = a;
+}
+void set_height(float inches)
+{
+Patient.inches = inches;
+}
+void set_weight(float weights
+{
+Patient.weight = weights;
+}
+void set_bday(int days)
+{
+Patient.b.day = days;
+}
+void set_bmonth(int months)
+{
+Patient.b.month = months;
+}
+void set_byear(int years)
+{
+Patient.b.year = years;
+}
+ 
+//-| Calculation Functions
+ 
+int person_age() // Calculate Person's age;
+{
+int month;
+int day;
+int year;
+ 
+cout << "What is the month (in form ex. 01) ?" << endl;
+cin >> month;
+ 
+cout << "What is the day (in form ex. 05) ?" << endl;
+cin >> day;
+ 
+cout << "What is the year (in form ex. 1992) ?" << endl;
+cin >> year;
+ 
+return Patient.b.year - year;
+}
+ 
+int maxheartrate(int age) // Calculate Max Heart Rate
+{
+return 220 - age;
+}
+ 
+int targetheartrate(int heart_rate) // Calculate Target Heart Rate 50 - 85% of max
+{
+int target;
+target = heart_rate*.6;
+ 
+return target;
+}
+ 
+float body_mass() // calculate BMI
+{
+ 
+float mass;
+float height2;
+mass = weight*730;
+height2 = Patient.inches * Patient.inches;
+mass = mass/height2;
+ 
+return mass;
+ 
+}
